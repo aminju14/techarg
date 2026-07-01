@@ -1,0 +1,21 @@
+# Draft / source material from AI page builder (not part of the site)
+Improve index.html file/
+Improve index.html file.zip
+favicon-preview.html
+
+# Empty / working folders
+assets/
+
+# Local tooling & editor config
+.claude/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+*.tmp
