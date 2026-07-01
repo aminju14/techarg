@@ -7,7 +7,7 @@
 <meta name="description" data-i18n-meta="id" content="Data Centre, jaringan fiber &amp; wireless, CCTV cerdas, videotron, dan produksi event — satu mitra teknologi terpercaya untuk bisnis Anda di Jakarta.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg">
-<meta name="theme-color" content="#E11D2E">
+<meta name="theme-color" content="#800000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,22 +17,22 @@
     --bg:#FBFBFD;--surface:#F4F5F9;--card:#FFFFFF;
     --text:#0B1120;--muted:#5A6576;
     --border:rgba(11,17,32,0.08);--chip:rgba(11,17,32,0.04);
-    --accent:#E11D2E;--accent-deep:#A30E1B;--accent2:#F0414F;
-    --accent-soft:rgba(225,29,46,0.10);--glow:rgba(225,29,46,0.20);
+    --accent:#800000;--accent-deep:#5C0000;--accent2:#A11A1A;
+    --accent-soft:rgba(128,0,0,0.10);--glow:rgba(128,0,0,0.22);
     --nav-bg:rgba(251,251,253,0.72);--glass:rgba(255,255,255,0.7);
     --glass-border:rgba(255,255,255,0.8);--shadow-xl:0 30px 70px rgba(11,17,32,0.14);
-    --aur1:rgba(225,29,46,0.14);--aur2:rgba(37,99,235,0.11);--aur3:rgba(124,58,237,0.09);
+    --aur1:rgba(128,0,0,0.14);--aur2:rgba(37,99,235,0.11);--aur3:rgba(124,58,237,0.09);
     --iso-top-a:#FFFFFF;--iso-top-b:#EEF0F5;--iso-left-a:#E4E7EE;--iso-left-b:#D3D8E2;--iso-right-a:#F4F6FA;--iso-right-b:#E7EAF1;--iso-cloud:#FFFFFF;--iso-edge:rgba(11,17,32,0.10);--iso-chip-bg:rgba(255,255,255,0.9);
   }
   html[data-theme="dark"]{
     --bg:#0A0C11;--surface:#0E1119;--card:#141925;
     --text:#F3F5F9;--muted:#98A2B3;
     --border:rgba(255,255,255,0.09);--chip:rgba(255,255,255,0.06);
-    --accent:#F0414F;--accent-deep:#B01421;--accent2:#FF6B78;
-    --accent-soft:rgba(240,65,79,0.14);--glow:rgba(240,65,79,0.28);
+    --accent:#A31D1D;--accent-deep:#6E0F0F;--accent2:#C0392B;
+    --accent-soft:rgba(163,29,29,0.18);--glow:rgba(163,29,29,0.32);
     --nav-bg:rgba(10,12,17,0.72);--glass:rgba(20,25,37,0.7);
     --glass-border:rgba(255,255,255,0.10);--shadow-xl:0 30px 70px rgba(0,0,0,0.5);
-    --aur1:rgba(240,65,79,0.18);--aur2:rgba(37,99,235,0.16);--aur3:rgba(124,58,237,0.14);
+    --aur1:rgba(163,29,29,0.22);--aur2:rgba(37,99,235,0.16);--aur3:rgba(124,58,237,0.14);
     --iso-top-a:#232A3A;--iso-top-b:#1A2030;--iso-left-a:#161C2A;--iso-left-b:#0F1420;--iso-right-a:#1E2534;--iso-right-b:#151B28;--iso-cloud:#2A3247;--iso-edge:rgba(255,255,255,0.10);--iso-chip-bg:rgba(20,25,37,0.9);
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -143,9 +143,9 @@
   .marquee-section{padding:0 var(--gutter) 40px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);transition:background .4s;overflow:hidden}
   .marquee-title{max-width:var(--maxw);margin:0 auto;padding:26px 0 4px;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);text-align:center}
   .marquee-mask{position:relative;overflow:hidden;max-width:var(--maxw);margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-  .marquee-track{display:flex;gap:64px;width:max-content;animation:marquee 28s linear infinite;padding:18px 0;align-items:center}
-  .marquee-track span{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:var(--muted);opacity:.55;letter-spacing:-.02em;white-space:nowrap}
-  .marquee-track span em{color:var(--accent);font-style:normal}
+  .marquee-track{display:flex;gap:clamp(40px,5vw,72px);width:max-content;animation:marquee 40s linear infinite;padding:22px 0;align-items:center}
+  .client-logo{height:40px;width:auto;max-width:160px;object-fit:contain;flex-shrink:0;opacity:.9;transition:opacity .3s,transform .3s}
+  .client-logo:hover{opacity:1;transform:scale(1.04)}
 
   /* SECTIONS */
   section{padding:clamp(72px,9vw,120px) var(--gutter)}
@@ -555,18 +555,26 @@
       <p class="marquee-title" data-i18n="marquee.title">Dipercaya oleh mitra &amp; klien terkemuka</p>
       <div class="marquee-mask">
         <div class="marquee-track">
-          <span>NEXUS<em>·</em>Tel</span>
-          <span>DataPrima</span>
-          <span>SkyLink</span>
-          <span>MEGA<em>grid</em></span>
-          <span>Vantix</span>
-          <span>Optima<em>ID</em></span>
-          <span>NEXUS<em>·</em>Tel</span>
-          <span>DataPrima</span>
-          <span>SkyLink</span>
-          <span>MEGA<em>grid</em></span>
-          <span>Vantix</span>
-          <span>Optima<em>ID</em></span>
+          <img class="client-logo" src="assets/client-logo/image(1).png" alt="Unilumin" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(2).png" alt="Dahua Technology" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(5).png" alt="Cisco" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(6).png" alt="Panduit" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(9).png" alt="Lampro" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(12).png" alt="Netviel" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(16).png" alt="DCN" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(19).png" alt="AVer" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(20).png" alt="Ruijie" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(23).png" alt="ZKTeco" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(1).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(2).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(5).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(6).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(9).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(12).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(16).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(19).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(20).png" alt="" aria-hidden="true" loading="lazy">
+          <img class="client-logo" src="assets/client-logo/image(23).png" alt="" aria-hidden="true" loading="lazy">
         </div>
       </div>
     </section>
